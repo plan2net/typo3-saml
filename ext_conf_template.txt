@@ -1,0 +1,4 @@
+# cat=basic/login; type=string; label=Name of the Authsource
+authSource =
+# cat=basic/login; type=int; label= Default Backend Group that newly created Users are part of
+defaultBeGroup =

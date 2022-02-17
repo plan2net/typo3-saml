@@ -1,0 +1,38 @@
+<f:layout name="Login"/>
+
+<f:section name="loginFormFields">
+    <div class="t3js-login-error" id="t3-login-error" style="display: none">
+        <div class="alert alert-danger">
+            <strong>
+                <f:translate key="login.error.message"/>
+            </strong>
+            <p>
+                <f:translate key="login.error.description"/>
+            </p>
+        </div>
+    </div>
+
+    <input type="hidden" id="t3-saml" name="saml_userident"/>
+
+    <div class="form-group t3js-login-username-section" id="t3-login-username-section">
+        <div class="form-control-wrap">
+            <div class="form-control-holder">
+                <div class="form-notice-capslock hidden t3js-login-alert-capslock">
+                    <img src="/typo3/sysext/backend/Resources/Public/Images/icon_capslock.svg" width="14" height="14"
+                         alt="Attention: Caps lock enabled!" title="Attention: Caps lock enabled!">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group" id="t3-saml-next-section">
+        <button class="btn btn-block btn-login t3js-saml-next"
+                type="submit"
+                id="t3-saml-next"
+                name="commandLI"
+                data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> {f:translate(key: 'login.process')}"
+                autocomplete="off">
+            <f:translate key="login.button.label" extensionName="cvc_saml"/>
+        </button>
+    </div>
+</f:section>

@@ -1,0 +1,68 @@
+{
+    "name": "cvc/typo3-saml",
+    "description": "This extension adds an authentication with SAML",
+    "license": "GPL-3.0-or-later",
+    "type": "typo3-cms-extension",
+    "authors": [
+        {
+            "name": "CARL von CHIARI GmbH",
+            "email": "opensource@cvc.digital"
+        }
+    ],
+    "homepage": "https://cvc.digital",
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "simplesamlphp/simplesamlphp": "^1.19",
+        "typo3/cms-backend": "^10.4",
+        "typo3/cms-core": "^10.4",
+        "typo3/cms-extbase": "^10.4",
+        "typo3/cms-fluid": "^10.4"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.23",
+        "friendsofphp/php-cs-fixer": "^3",
+        "nimut/testing-framework": "^6",
+        "phpstan/phpstan": "^1",
+        "phpunit/phpunit": "^8",
+        "saschaegerer/phpstan-typo3": "^1",
+        "typo3/minimal": "^10.4"
+    },
+    "replace": {},
+    "autoload": {
+        "psr-4": {
+            "Cvc\\Typo3\\CvcSaml\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cvc\\Typo3\\CvcSaml\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "simplesamlphp/composer-module-installer": true,
+            "typo3/class-alias-loader": true,
+            "typo3/cms-composer-installers": true,
+            "ergebnis/composer-normalize": true
+        },
+        "bin-dir": ".Build/bin",
+        "vendor-dir": ".Build/vendor"
+    },
+    "extra": {
+        "typo3/cms": {
+            "app-dir": ".Build",
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "extension-key": "cvc_saml",
+            "web-dir": ".Build/public"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "mkdir -p .Build/public/typo3conf/ext/",
+            "[ -L .Build/public/typo3conf/ext/cvc_saml ] || ln -snvf ../../../../. .Build/public/typo3conf/ext/cvc_saml",
+            "ln -snvf ../vendor/simplesamlphp/simplesamlphp/www .Build/public/simplesamlphp",
+            "ln -snvf vendor/simplesamlphp/simplesamlphp .Build/"
+        ]
+    }
+}
