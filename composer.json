@@ -17,7 +17,8 @@
         "typo3/cms-backend": "^10.4",
         "typo3/cms-core": "^10.4",
         "typo3/cms-extbase": "^10.4",
-        "typo3/cms-fluid": "^10.4"
+        "typo3/cms-fluid": "^10.4",
+        "typo3/minimal": "^10.4"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23",
@@ -25,8 +26,7 @@
         "nimut/testing-framework": "^6",
         "phpstan/phpstan": "^1",
         "phpunit/phpunit": "^8",
-        "saschaegerer/phpstan-typo3": "^1",
-        "typo3/minimal": "^10.4"
+        "saschaegerer/phpstan-typo3": "^1"
     },
     "replace": {},
     "autoload": {
