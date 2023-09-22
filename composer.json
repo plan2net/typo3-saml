@@ -11,14 +11,14 @@
     ],
     "homepage": "https://cvc.digital",
     "require": {
-        "php": ">=7.4",
+        "php": ">=7.2",
         "ext-json": "*",
         "simplesamlphp/simplesamlphp": "^1.19",
-        "typo3/cms-backend": "^10.4",
-        "typo3/cms-core": "^10.4",
-        "typo3/cms-extbase": "^10.4",
-        "typo3/cms-fluid": "^10.4",
-        "typo3/minimal": "^10.4"
+        "typo3/cms-backend": "^9.5",
+        "typo3/cms-core": "^9.5",
+        "typo3/cms-extbase": "^9.5",
+        "typo3/cms-fluid": "^9.5",
+        "typo3/minimal": "^9.5"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23",
